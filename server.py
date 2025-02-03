@@ -1,6 +1,8 @@
-from flask import Flask, request, jsonify 
+from flask import Flask, request, jsonify
 from pymongo import MongoClient
+from waitress import serve
 
+# Initialize Flask app
 app = Flask(__name__)
 
 # Connect to MongoDB
@@ -46,6 +48,6 @@ def register():
 
     return jsonify({"status": "success", "message": "Device registered successfully"})
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+# Start the server using waitress
+if __name__ == "__main__":
+    serve(app, host='0.0.0.0', port=5000)
