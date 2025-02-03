@@ -1,0 +1,18 @@
+# Node modules folder
+node_modules/
+
+# Logs
+*.log
+
+# .env file (for sensitive data like API keys)
+.env
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Optional: Ignore build files or dist folder
+/dist
+/build
